@@ -1,0 +1,6 @@
+name: kws_env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /home/rayan/miniconda3/envs/kws_env
