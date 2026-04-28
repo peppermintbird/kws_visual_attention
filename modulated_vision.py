@@ -4,8 +4,7 @@ import torch
 import cv2
 import sys
  
-# ─── CONFIG ───────────────────────────────────────────────────────────────────
- 
+# config
 class Config:
     ATTENTION_PARAMS = {
         'size_krn': 16,
@@ -23,8 +22,7 @@ class Config:
         'out_ch': 1
     }
  
-# kws mod
- 
+# kws mod parameters
 THRESHOLD    = 0.7    # confidence threshold
 BOOST_WEIGHT = 2.0    # saliency multiplier for target region
  
@@ -111,7 +109,7 @@ print(f"Using device: {device}")
  
 config = Config()
  
-data = np.load('animation_shapes_jitter_ev.npy')
+data = np.load('shapes_jitter_5_events.npy')
  
 if data.dtype.names:
     x = data['x'].astype(int)
@@ -223,7 +221,7 @@ try:
             cv2.putText(boosted_colored, status,        (10, 65),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0) if accepted else (0, 0, 255), 2)
  
-            # ── combine side by side and write ────────────────────────
+            # figure side by side and write to video
             combined = np.hstack((orig_colored, boosted_colored))
             video_writer.write(combined)
             frame_count += 1
