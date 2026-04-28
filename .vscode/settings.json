@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "wsl://Ubuntu/home/rayan/miniconda3/envs/kws_env/bin/python",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
+}
