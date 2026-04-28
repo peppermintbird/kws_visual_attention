@@ -1,29 +1,5 @@
 # KWS visual attention
 
-
-
-```bash
-kws_visual_attention/
-├── run.py
-├── data/
-│   ├── __init__.py
-│   ├── spiking_dataset.py      ← SpikingDS (one sample → graph)
-│   └── spiking_commands.py     ← SpikingCommands (LightningDataModule)
-├── keyword_spotter/
-│   ├── __init__.py
-│   ├── kws_spotter.py
-│   └── ... (your GCNN scripts: model, edge_generator, config, etc.)
-├── keyword_modulator/
-│   ├── __init__.py
-│   ├── helpers_kws_mod.py
-│   └── kws_mod.py
-└── visual_attention/
-    ├── __init__.py
-    ├── helpers_visual_att.py
-    ├── visual_attention.py
-    └── video.py
-```
-
 ## Keyword-spotter 
 **Input:** raw audio (converted to events) <br>
 **Output:** confidence, keyword class
